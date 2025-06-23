@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+
+  <script>
+    // function function1() {
+    //   console.log('hello');
+    //   console.log(2+2);
+    // }
+    // function1();
+    // function1();
+    // function testName () {
+    //   console.log('test function')
+    // }
+
+  // learning parameters of Functions:
+
+      function calculateTax(cost, taxPercent = 0.1) { // here, 0.1 is set as the default value of the paramter 'taxPercent'
+        console.log(taxPercent);
+        console.log(cost * taxPercent);
+      }
+      calculateTax(2000, 0.2);
+      calculateTax(5000, 0.4);
+      calculateTax(2500, 0.7);
+
+      function greet(name){
+
+       if(!name) {
+        name = 'Hi there check '
+       }
+        // console.log(name);
+       
+        // return (console.log(name));
+        return name;
+      }
+      greet();
+      console.log(greet('amit'));
+
+        console.log(greet('kunal'));
+        console.log(greet());
+
+        function convertToFahrenheit(celcius){
+          
+          let fahrenheit = (celcius * 9/5) + 32
+          return fahrenheit;
+        }
+        console.log(convertToFahrenheit(25));
+
+        function convertToCelcius(fahrenheit){
+          let celcius = (fahrenheit - 32) * 5 / 9
+          return celcius;
+        }
+        console.log(convertToCelcius(86));
+
+        function convertTemperature(degrees,unit){
+          let convertedTemperature;
+          if (unit === 'C'){
+            convertedTemperature = (degrees * 9/5) + 32
+          } else if (unit === 'F'){
+            convertedTemperature = (degrees - 32) * 5 / 9
+          }
+          return (convertedTemperature + unit);
+        }
+
+        console.log(convertTemperature(77,'C'));
+         console.log(convertTemperature(86,'F'));    
+         
+         function convertLength(length,from,to){
+          let convertedLength;
+          if(from==='miles' && to ==='km'){
+            convertedLength = length * 1.6 ;
+            } else if (from==='km' && to==='miles'){
+              convertedLength = length / 1.6;
+
+            } else if (from==='miles' && to ==='ft'){
+              convertedLength = length * 5280;
+            } else if (from==='km'&& to==='ft'){
+              convertedLength = length * 3281;
+            } else if (from==='ft' && to==='miles'){
+              convertedLength = length/5280;
+            }else if (from==='ft' && to==='km'){
+              convertedLength = length/3281;
+            
+            
+            }else {
+              convertedLength = `Invalid unit: ${from}`;
+            }
+            return convertedLength + to ;
+         }
+         console.log(convertLength(5000,'ft','km'));
+
+
+
+
+
+    
+
+  </script>
+  
+</body>
+</html>

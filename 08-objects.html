@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+
+  <script>
+    /* const product={
+      name: 'socks',
+      price: 1090
+    };
+    console.log(typeof product);
+    console.log(product.name);
+    console.log(product.price);
+
+    product.name = 'cotton socks';
+    console.log(product);
+    console.log(product.name);
+
+    product.newProperty = true;
+    console.log(product);
+
+   delete product.newProperty;
+   console.log(product); */
+
+   
+   
+   
+   
+   
+   const product2 = {
+    name: 'shirt',
+    ['delivery-time']: '1 day',
+    rating : {
+      stars: 4.5,
+      count: 87
+    },
+    fun : function function1() { // function stored as a property-value pair
+      console.log('Function inside object')
+    }
+   };
+
+   console.log(product2.name);
+   console.log(product2['name']);
+   console.log(product2['delivery-time']);
+
+
+   console.log(product2.rating)
+   console.log(product2.rating.count)
+
+   product2.fun(); // runs the function associated with that property.
+   console.log(product2.fun());
+
+   console.log() //is actually a function 'log' insidd the object 'console' which is made by JS.
+
+   console.log(typeof console.log); //function
+   //  function inside a object  is called as a method
+
+   console.log(JSON.stringify(product2));
+
+   const jsonString = JSON.stringify(product2);
+
+   console.log(JSON.parse(jsonString));
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+   const  object1 = {
+    message: 'hello'
+   };
+
+   const object2 = object1;
+
+   object1.message  = 'Good Job!';
+   console.log(object1);
+   console.log(object2);
+
+   const object3 = {
+    message:'Good Job!'
+   };
+
+   console.log(object3===object1);// as obj3 has a different reference and different memory space. when we compare two variables which have objects, we are comparing their references and not the values inside them.
+
+   console.log(object2 === object1); // as these both have the same reference.
+
+    const object4 = {
+    message:'Good Job!',
+    price: 799
+   };
+  //  const message = object4.message;
+   const { message, price } = object4; // takes the property 'message. from the object and  stores it in the variable const message.'
+   console.log(message);
+   console.log(price);
+
+   const object5 = {
+    // message : message // here we are eqauting the value of variable 'message'i.e 'Good Job!' into the property of the object
+    message, // basically does the same thing as message : message 
+    // also called as the shorthand property.
+
+    // method: function function1() {
+    //   console.log('method');
+
+      method() {
+        console.log('method') // using the shorthand method to create a method inside an object 
+      }
+    }
+
+    
+   
+   console.log(object5);
+   object5.method();
+
+
+  const product5 = {
+    name: 'basketball',
+    price: 2095
+  }
+  console.log(product5);
+  console.log(product5.price + 500);
+
+  product5['delivery time','3 days'] ;
+  console.log(product5);
+  
+product5.deliverytime = '3 days';
+console.log(product5);
+product5.material = 'Rubber';
+console.log(product5);
+
+product5.price += 500;
+console.log(product5);
+
+const item1 = {
+  name: 'Dart Board',
+  price: '900'
+};
+
+const item2 = {
+  name: 'Dart Board',
+  price: '900'
+};
+
+function comparePrice(x,y){
+  let higherValue=0;
+  if (x>y){
+    higherValue = x;
+  } else if (y>x) {
+    higherValue = y;
+  } else {
+    console.log("Error in the parameters");
+  }
+  return higherValue;
+}
+
+console.log(comparePrice(item1.price,item2.price));
+
+const testsentence = 'Good Morning';
+console.log(testsentence.toLowerCase());
+
+// function isSameProduct(p1,p2){
+//   let same = true;
+//   if (p2===p1){
+//     same = true;
+
+//   } else if (p2!=p1){
+//     same = false;
+//   } else  {
+//     console.log('error in parameters');
+//   }
+//   return same;
+
+  
+// }
+
+function isSameProduct (p1,p2) {
+  if ( p1.name === p2.name && p1.price===p2.price){
+    return true;
+
+  }else {
+    return  false;
+  }
+}
+
+// function isSameProduct(p1, p2) {
+//   return p1 === p2;
+// }
+
+
+
+console.log(isSameProduct(item1,item2));
+
+console.log('hello'.repeat(4));
+
+const shubhu ={
+  hobbies : 'loving amu',
+  profession: 'artist',
+  price: 'invaluable'
+}
+const amu ={
+  hobbies : 'loving shubhu',
+  profession: 'artist',
+  price: 'invaluable'
+}
+
+function checkParameters (l1,l2) {
+  if (l1.profession === l2.profession && l1.price === l2.price){
+ return  true;
+  } else{
+    return false;
+  }
+ 
+
+}
+
+console.log(checkParameters(shubhu,amu));
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+    
+
+
+
+    
+
+  </script>
+  
+</body>
+</html>

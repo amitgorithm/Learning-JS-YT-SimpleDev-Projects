@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button> hello </button>
+  <button class="js-button"> Second button </button>
+  <button class="js-button-9a">9a</button>
+  <button class="js-button-9b" onclick="change9b()">9b</button><br><br>
+  <button class="js-buttons-H" onclick="clickHT('heads')">heads</button>
+  <button class="js-buttons-T" onclick="clickHT('tails')">tails</button>
+  <p class="js-p-move" ></p>
+  
+
+
+  <script>
+    
+   const headsElem = document.querySelector('.js-buttons-H').innerText;
+   const tailsElem = document.querySelector('.js-buttons-T').innerText;
+   let moveElem = document.querySelector('.js-p-move').innerHTML;
+
+   function clickHT (elem='') {
+    
+
+    let chosenOption = '';
+    if(headsElem == 'heads'){
+      moveElem = `You chose ${headsElem}`;
+    } else if (tailsElem =  'tails'){
+      moveElem = `You chose ${tailsElem}`;
+
+    } else {
+      console.log('Some Error')
+    }
+
+  
+
+      
+
+
+   }
+
+
+    console.log(document.querySelector('button').innerHTML);
+     document.querySelector('button')
+      .innerHTML = 'Changed';
+
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+
+    // exercises:
+    console.log(document.querySelector('.js-button-9a'));
+    console.log(document.querySelector('.js-button-9b'));
+    
+    function change9b () {
+      const button9bElement = document.querySelector('.js-button-9b');
+      if(button9bElement.innerText === '9b'){
+        button9bElement.innerText = '9b Done!';
+      }else {
+        button9bElement.innertext = '9b';
+      }
+
+
+
+
+
+    }
+
+
+
+
+    /*
+    console.log(document.title);
+    document.title = 'Changed';
+
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button> Good Job! </button>';
+    */
+
+
+
+
+
+
+
+    // //DOM is also an built-in object.
+
+    // document.body.innerHTML = 'hello'
+    // document.title = 'Good Job';
+
+
+
+
+
+
+  
+  </script>
+</body>
+</html>
