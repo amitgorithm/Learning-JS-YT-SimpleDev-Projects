@@ -12,15 +12,52 @@
   <button class="js-button-9b" onclick="change9b()">9b</button><br><br>
   <button class="js-buttons-H" onclick="clickHT('heads')">heads</button>
   <button class="js-buttons-T" onclick="clickHT('tails')">tails</button>
-  <p class="js-p-move" ></p>
+  
+
+  <button onclick ="
+  document.querySelector('.js-choice')
+        .innerHTML = 'You chose : Heads';
+
+  
+  ">Heads1</button>
+  <button onclick=" 
+      document.querySelector('.js-choice')
+          .innerHTML = 'You chose : Tails';
+  ">Tails1</button> <br><br>
+  <p class="js-choice" ></p> <br> <br> 
+
+  <input placeholder="Name" class="js-name-input" >
+
+  <!-- <button class="js-submit" onclick="
+        const inputElement = document.querySelector('.js-name-input');
+        document.querySelector('.js-display-name')
+            .innerHTML = `Your name is: ${inputElement.value}`
+  ">Submit</button> -->
+
+  <button class="js-submit" onkeydown="
+      if(event.key === 'Enter'){
+        
+        const inputElement = document.querySelector('.js-name-input');
+        document.querySelector('.js-display-name')
+              .innerHTML = `Your name is : ${inputElement.value}`;
+
+      }
+      
+        
+  ">Submit</button>
+  <p class="js-display-name"> To Display Name </p>
   
 
 
   <script>
+   
+
+    
+
     
    const headsElem = document.querySelector('.js-buttons-H').innerText;
    const tailsElem = document.querySelector('.js-buttons-T').innerText;
-   let moveElem = document.querySelector('.js-p-move').innerHTML;
+   
 
    function clickHT (elem='') {
     
