@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Moving Game</title>
+</head>
+<body>
+  <canvas id="gameCanvas" width="800" height="800" style="border:1px solid black;"></canvas>
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let x = canvas.width / 2;
+    let y = canvas.height / 2;
+    const speed = 5;
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(x, y, 50, 50);
+    }
+
+    function update() {
+      if (keys['ArrowUp']) y -= speed;
+      if (keys['ArrowDown']) y += speed;
+      if (keys['ArrowLeft']) x -= speed;
+      if (keys['ArrowRight']) x += speed;
+
+      draw();
+      requestAnimationFrame(update);
+    }
+
+    const keys = {};
+    window.addEventListener('keydown', (e) => {
+      keys[e.key] = true;
+    });
+
+    window.addEventListener('keyup', (e) => {
+      keys[e.key] = false;
+    });
+
+    update();
+  </script>
+  
+</body>
+</html>
