@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises Array</title>
+</head>
+
+<body>
+   <h>Exercises</h>
+
+  <script>
+    const nums = [10,20,30];
+    nums[2] = 90;
+    console.log(nums);
+    // output: [10, 20, 90]
+
+    const getLastValue = [1,20,22,24,5];
+    console.log(getLastValue[getLastValue.length - 1]);
+    // output: 5
+
+    function arraySwap(arr) {
+        const temp = arr[0];
+        arr[0] = arr[arr.length-1];
+        arr[arr.length-1] = temp;
+        console.log(arr);
+      
+    }
+    const arr1 = [1,2,3,4,5];
+    console.log(arr1);
+    arraySwap(arr1);
+    const arrNames = ['hi','hello','good'];
+    console.log(arrNames);
+    arraySwap(arrNames);
+    arr5 = [1,15,5,6,7,10,'hi','namaste'];
+    console.log(typeof arr5);
+    arraySwap(arr5);
+
+   for (let i = 0; i <= 10; i+=2){
+    console.log(i);
+   }
+   let i = 5;
+   while (i>=0){
+    console.log(i);
+    i--;
+   }
+  function addOne (array) {
+    for(let i = 0; i < array.length; i++){
+      array[i] = array[i] - 1;
+      console.log(array);
+    }
+  }
+  arr6 = [1,2,3];
+  addOne(arr6);
+
+
+
+  </script>
+</body>
+</html>
